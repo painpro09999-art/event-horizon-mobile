@@ -1,0 +1,10 @@
+# Event Horizon rules
+
+- Always keep execution local to the device.
+- Use Unix domain sockets instead of insecure or noisy network routes for intra-process messaging.
+- Never call `os.system`, `eval`, or `exec` from runtime execution paths.
+- Use list-based subprocess calls (`subprocess.run([...], check=True)`) instead of shell strings.
+- Treat memory ceilings and thermal conditions as hard runtime constraints.
+- Keep the task ledger append-only and auditable.
+- Fail closed on untrusted or unsafe code.
+- Prune temporary buffers, logs, and transient data after each patch cycle.
